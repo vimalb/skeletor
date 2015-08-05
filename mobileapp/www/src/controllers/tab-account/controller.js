@@ -26,10 +26,11 @@ angular.module(MODULE_NAME, ['ionic'])
             }
           });
     })
-    .controller(CONTROLLER_NAME, function($scope) {
+    .controller(CONTROLLER_NAME, function($scope, CLIENT_SETTINGS) {
       $scope.settings = {
         enableFriends: true
       };
+      $scope.CLIENT_SETTINGS = CLIENT_SETTINGS;
     })
   
 })();

@@ -23,8 +23,8 @@ deferredBootstrapper.bootstrap({
   element: document.body,
   module: 'mainApp',
   resolve: {
-    API_TEST: ['$http', function ($http) {
-      return $http.get('/api/test');
+    CLIENT_SETTINGS: ['$http', function ($http) {
+      return $http.get('/client.settings.json');
     }],
   }
 });

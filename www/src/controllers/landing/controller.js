@@ -18,9 +18,10 @@ angular.module(MODULE_NAME, ['ngRoute'])
       controller: CONTROLLER_NAME
     });
   })
-  .controller(CONTROLLER_NAME, function($scope) {
+  .controller(CONTROLLER_NAME, function($scope, CLIENT_SETTINGS) {
     console.log("Loading controller", CONTROLLER_NAME);
     
+    console.log("Client Settings", CLIENT_SETTINGS);
     $scope.test = 'hello world';
     
   });
