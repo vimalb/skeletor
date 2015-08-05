@@ -14,7 +14,7 @@ document.APP_MODULES.push(MODULE_NAME);
 console.log(MODULE_NAME, "Registering service", SERVICE_NAME);
 angular.module(MODULE_NAME, [])
     .factory(SERVICE_NAME, function() {
-      // Might use a resource here that returns a JSON array
+      console.log("Instantiating service", SERVICE_NAME);
 
       // Some fake testing data
       var chats = [{

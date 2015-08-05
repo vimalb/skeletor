@@ -21,7 +21,7 @@ var wait = function(duration_ms){
 }
 
 var CLIENT_SETTINGS_TEMPLATE_FILE = "" + __dirname + "/www/client.settings.template";
-var CLIENT_SETTINGS_FILE = "" + __dirname + "/www/client.settings.json";
+var CLIENT_SETTINGS_FILE = "" + __dirname + "/www/client.settings.js";
 handlebars.create().engine(CLIENT_SETTINGS_TEMPLATE_FILE, {env: JSON.parse(JSON.stringify(process.env))}, function(err, output) {
   if (err) {
     throw err;

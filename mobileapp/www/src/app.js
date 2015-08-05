@@ -30,8 +30,17 @@ deferredBootstrapper.bootstrap({
   element: document.body,
   module: 'mainApp',
   resolve: {
-    CLIENT_SETTINGS: ['$http', function ($http) {
-      return $http.get('client.settings.json');
+    CLIENT_SETTINGS: ['$http', '$q', function ($http, $q) {
+      var deferred = $q.defer();
+      deferred.resolve(document.CLIENT_SETTINGS);
+      return deferred.promise;
+    }],
+    SOCKET_IO_CLIENT: ['$http', '$q', function ($http, $q) {
+      var deferred = $q.defer();
+      $.getScript(document.CLIENT_SETTINGS.SERVER_URL+'/socket.io/socket.io.js', function() {
+          deferred.resolve();
+      });
+      return deferred.promise;
     }],
   }
 });

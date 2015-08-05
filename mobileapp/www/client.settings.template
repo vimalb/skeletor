@@ -1,1 +1,1 @@
-{ "SERVER_URL": "{{ env.MOBILE_SERVER_URL }}" }
+document.CLIENT_SETTINGS = { "SERVER_URL": "{{ env.MOBILE_SERVER_URL }}" }

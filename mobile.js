@@ -6,7 +6,7 @@ var handlebars = require("node-handlebars");
 
 
 var CLIENT_SETTINGS_TEMPLATE_FILE = "" + __dirname + "/mobileapp/www/client.settings.template";
-var CLIENT_SETTINGS_FILE = "" + __dirname + "/mobileapp/www/client.settings.json";
+var CLIENT_SETTINGS_FILE = "" + __dirname + "/mobileapp/www/client.settings.js";
 handlebars.create().engine(CLIENT_SETTINGS_TEMPLATE_FILE, {env: JSON.parse(JSON.stringify(process.env))}, function(err, output) {
   if (err) {
     throw err;
