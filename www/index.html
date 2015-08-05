@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>Skeletor App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta property="og:title" content="Skeletor App" />
+    <meta property="og:site_name" content="Skeletor App"/>
+    <meta property="og:url" content="http://demo.skeletor.local" />
+    <meta property="og:description" content="Try out Skeletor" />
+    <meta property="og:image" content="http://demo.skeletor.local/assets/icons/app-fb-logo.jpg" />
+    <link rel='stylesheet' href='/lib/jquery-ui/jquery-ui.css'>
+    <link rel='stylesheet' href='/lib/nouislider/jquery.nouislider.css'>
+    <link rel='stylesheet' href='/lib/font-awesome/css/font-awesome.css'>
+    <link rel="stylesheet" href="/lib/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="/lib/angular-carousel/angular-carousel.css"/>
+    <link rel='stylesheet' href='/assets/fonts/fonts.css'>
+    <link rel="stylesheet" href="/assets/app.css"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/app-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/app-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/app-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/app-icon-144x144.png" />
+  </head>
+
+  <body>
+    <div ng-view></div>
+    
+    <script src="/lib/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+      jQuery.extend({
+        postJSON: function(url, data, callback) {
+          return jQuery.ajax({
+            type: "POST",
+            url: url,
+            data: JSON.stringify(data),
+            success: callback,
+            dataType: "json",
+            contentType: "application/json",
+            processData: false
+          });
+        },
+        delete: function(url, callback) {
+          return jQuery.ajax({
+            type: "DELETE",
+            url: url,
+            success: callback,
+            dataType: "json"
+          });
+        }
+      });    
+    </script>
+    <script src="/lib/jquery-ui/jquery-ui.js"></script>
+    <script src="/lib/lodash/lodash.js"></script>
+    <script src="/lib/screenful/screenfull.min.js"></script>
+    <script src="/lib/uri/URI.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/angular-route/angular-route.js"></script>
+    <script src="/lib/angular-touch/angular-touch.js"></script>
+    <script src="/lib/angular-animate/angular-animate.js"></script>
+    <script src="/lib/angular-aria/angular-aria.js"></script>
+    <script src="/lib/angular-material/angular-material.js"></script>
+    <script src="/lib/angular-deferred-bootstrap/angular-deferred-bootstrap.min.js"></script>
+    <script src="/lib/angular-carousel/angular-carousel.js"></script>
+    <script src="/lib/nouislider/jquery.nouislider.js"></script>
+    <script src="/lib/nouislider/nouislider.js"></script>
+    
+    <script src="/src/controllers/landing/controller.js"></script>
+    <script src="/src/filters/lolcat/filter.js"></script>
+    <script src="/src/directives/pirate/directive.js"></script>
+    <script src="/src/app.js"></script>
+    
+  </body>
+
+</html>

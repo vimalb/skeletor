@@ -1,0 +1,63 @@
+{
+  "name": "angular-deferred-bootstrap",
+  "version": "0.1.7",
+  "description": "Initialize your AngularJS app with constants loaded from the back-end.",
+  "main": "angular-deferred-bootstrap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philippd/angular-deferred-bootstrap"
+  },
+  "keywords": [
+    "angular",
+    "bootstrap"
+  ],
+  "author": {
+    "name": "Philipp Denzler",
+    "email": "philippd@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philippd/angular-deferred-bootstrap/issues"
+  },
+  "homepage": "https://github.com/philippd/angular-deferred-bootstrap",
+  "jspm": {
+    "format": "global",
+    "registry": "github",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.2.1"
+    },
+    "shim": {
+      "angular-deferred-bootstrap": {
+        "deps": [
+          "angular"
+        ],
+        "exports": "deferredBootstrapper"
+      }
+    }
+  },
+  "gitHead": "c0712003e50c18ac0295594cec54baea4b0663a8",
+  "_id": "angular-deferred-bootstrap@0.1.7",
+  "_shasum": "0b45e78e676114e5970898dd4f85741fc2e0ced3",
+  "_from": "angular-deferred-bootstrap@*",
+  "_npmVersion": "2.7.4",
+  "_nodeVersion": "0.12.2",
+  "_npmUser": {
+    "name": "philippd",
+    "email": "philippd@gmail.com"
+  },
+  "dist": {
+    "shasum": "0b45e78e676114e5970898dd4f85741fc2e0ced3",
+    "tarball": "http://registry.npmjs.org/angular-deferred-bootstrap/-/angular-deferred-bootstrap-0.1.7.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "philippd",
+      "email": "philippd@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/angular-deferred-bootstrap/-/angular-deferred-bootstrap-0.1.7.tgz"
+}
