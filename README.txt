@@ -6,8 +6,9 @@ Overview:
 	* Python / Flask API server
 
 Setup:
-	# export APP_URL=http://your.local.domain
-	# export API_URL=http://localhost:3000
+	# export WWW_SERVER_URL=http://ip.add.re.ss:5000
+	# export API_URL=http://ip.add.re.ss:3000
+	# export MOBILE_SERVER_URL=http://ip.add.re.ss:5000
 	# pip install requirements.txt
 	# npm install
 	# cd mobileapp
@@ -26,5 +27,10 @@ Running Locally:
 
 
 Running Tests:
-    # nosetests --nocapture api.tests
+	# nosetests --nocapture api.tests
     
+Running Mobile App on Android Phone:
+	Web Server (port 5000):
+		# node web.js
+	Build and Install App:
+		# cordova run android

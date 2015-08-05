@@ -1,5 +1,4 @@
 var API_URL = process.env.API_URL || "http://localhost:3000";
-var APP_URL = process.env.APP_URL || "http://localhost:5000";
 
 var _ = require('lodash-node');
 var q = require('q');
