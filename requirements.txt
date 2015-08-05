@@ -1,0 +1,8 @@
+nose
+requests
+textblob
+python-dateutil
+Flask
+beautifulsoup4
+nltk
+
