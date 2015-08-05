@@ -11,6 +11,7 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var parse = require('csv-parse');
 var proxy = require('express-http-proxy');
+var handlebars = require("node-handlebars");
 var jcopy = function(x){return JSON.parse(JSON.stringify(x));}
 var wait = function(duration_ms){
   var deferred = q.defer();
@@ -20,7 +21,19 @@ var wait = function(duration_ms){
   return deferred.promise;
 }
 
-
+var CLIENT_SETTINGS_TEMPLATE_FILE = "" + __dirname + "/www/client.settings.template";
+var CLIENT_SETTINGS_FILE = "" + __dirname + "/www/client.settings.json";
+handlebars.create().engine(CLIENT_SETTINGS_TEMPLATE_FILE, {env: JSON.parse(JSON.stringify(process.env))}, function(err, output) {
+  if (err) {
+    throw err;
+  }
+  fs.writeFile(CLIENT_SETTINGS_FILE, output, function(err) {
+    if(err) {
+      throw err;
+    }
+    console.log(CLIENT_SETTINGS_FILE, "rendered");
+  });
+}); 
 
 var app = express();
 var server = require('http').Server(app);

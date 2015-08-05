@@ -10,7 +10,9 @@ Setup:
 	# export API_URL=http://localhost:3000
 	# pip install requirements.txt
 	# npm install
-	# cd mobileapp; cordova prepare
+	# cd mobileapp
+		# npm install
+		# cordova prepare
 
 
 

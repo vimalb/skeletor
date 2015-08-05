@@ -1,7 +1,23 @@
-var url = require('url');
+var fs = require('fs');
 var express = require('express');
 var gzippo = require('gzippo');
 var logger = require('morgan');
+var handlebars = require("node-handlebars");
+
+
+var CLIENT_SETTINGS_TEMPLATE_FILE = "" + __dirname + "/mobileapp/www/client.settings.template";
+var CLIENT_SETTINGS_FILE = "" + __dirname + "/mobileapp/www/client.settings.json";
+handlebars.create().engine(CLIENT_SETTINGS_TEMPLATE_FILE, {env: JSON.parse(JSON.stringify(process.env))}, function(err, output) {
+  if (err) {
+    throw err;
+  }
+  fs.writeFile(CLIENT_SETTINGS_FILE, output, function(err) {
+    if(err) {
+      throw err;
+    }
+    console.log(CLIENT_SETTINGS_FILE, "rendered");
+  });
+}); 
 
 
 
